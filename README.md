@@ -10,3 +10,7 @@ TTL of the response is very low - indicative of fast flux
 Requests for any domain that is put into the watchlist.
 
 Requires Python and Scapy.
+
+Put domains to be watched for in watch.domains
+Put noisy domains you don't care about into whitelist.domain
+Download the Alexa top million domains list at http://s3.amazonaws.com/alexa-static/top-1m.csv.zip and unzip the file in the same directory as Flexo.
