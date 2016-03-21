@@ -88,7 +88,7 @@ def analyze_packet(q):
 				if (packet.getlayer("DNS").qr == 0):
 					#Packet is a query
 					dnsid.append(str(hex(packet.getlayer("DNS").id)))
-					lendom = len(domain)
+					lendom = len(packet[DNSQR].qname)
         	                	if domain in watch_domains:
         	                	        print "[*] ALERT: Requested domain is in watchlist %s \n" % (domain)
         	                	if not domain in alexa_top_million and not domain.endswith("localdomain"):
